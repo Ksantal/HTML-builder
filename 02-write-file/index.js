@@ -3,14 +3,6 @@ const path = require('path');
 const newFile = fs.createWriteStream(path.join(__dirname, 'NewList.txt'));
 const readline = require('readline');
 const fileInput = readline.createInterface({input: process.stdin});
-// function list (content) {
-//   const json = JSON.stringify(content);
-//   fs.createWriteStream('NewList.txt', json, (error) => {
-//     if (error) return console.error(error.message);
-//     console.log('Здраствуйте. Что желаете записать?');});
-// }
-// readFile.on('error', error => console.log('Error', error.message));
-//fs.createWriteStream(way);
 
 fileInput.on('SIGINT', () => {
   console.log('Данные находятся в файле NewList.txt');
