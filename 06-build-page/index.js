@@ -24,7 +24,7 @@ async function html () {
     indexSrcData = indexSrcData.replace(`{{${componentName}}}`, componentText);
   }
   await Promises.writeFile(indexDestination, indexSrcData);
-  await console.log('index.html created');
+  
 }
 
 
